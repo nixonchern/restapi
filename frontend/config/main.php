@@ -11,7 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'homeUrl' => '/',
+    'defaultRoute' => 'request',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -48,6 +48,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 //['GET,HEAD request' => 'request/index']
+                '/' => 'request',
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'request',
